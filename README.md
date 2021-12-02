@@ -6,17 +6,16 @@ Input user data and display it on the modal window
 
 1. Clone the repo to your local dir.
 2. Run `npm install` to install all depedencies.
-3. Run `npm start` to run the react app in local dev server.
+3. Run `npm start` to run the react app in local dev server. 
 
-# Prodemy #7
-
-## Tugas React-JS
+## Tugas Prodemy #7 - React-JS
 
 1. [react-profile_card](https://github.com/dafiqarba/react-profile_card) (24 November 2021)
 2. [react-form-modal](https://github.com/dafiqarba/react-form-modal) (2 Desember 2021)
 
+## Getting Started with Create React App
 <details>  
-<summary> #Getting Started with Create React App</summary>
+<summary> Expand</summary>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
