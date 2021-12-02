@@ -12,9 +12,7 @@ function App() {
   const onSubmitDataHandler = (userDataForm) => {
     setUserData(userDataForm);
     setModalState(true);
-    console.log(userData);
   }
-
   
   return (
     <div className="App">
