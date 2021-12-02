@@ -1,5 +1,10 @@
 import "./ModalWindow.css";
 
+import ModalAvatar from "./ModalAvatar";
+import ModalDataId from "./ModalDataId";
+import ModalData from "./ModalData";
+import ModalSocialMedia from "./ModalSocialMedia";
+
 function ModalWindow(props) {
   if (props.modalState === true) {
     console.log(props.userData);
@@ -11,104 +16,48 @@ function ModalWindow(props) {
     });
   }
 
+  let label = {
+    label1: "Tanggal Lahir",
+    label2: "Pendidikan",
+    label3: "Jenis Kelamin",
+    label4: "Agama",
+    label5: "Email",
+    label6: "Nomor HP",
+    label7: "Keahlian",
+    label8: "Alamat",
+  };
+
   return (
     <div className="modal-wrapper" id="modal-wrapper">
       <div className="card">
-        <div className="card__left">
-          <div className="card__left-img-box">
-            <img
-              alt="avatar"
-              className="card__left-img"
-              id="previewAvatar"
-              src={props.userData.avatar}
-            />
-          </div>
-        </div>
-        <div className="card__right">
-          <div className="card__right-id-box">
-            <h1 className="card__right-id">
-              <span className="card__right-id-name" id="previewName">
-                {props.userData.name}
-              </span>
-              <span className="card__right-id-batch">Prodemy #7</span>
-            </h1>
-          </div>
-          <div className="card__right-detail-box">
-            <div className="card__right-detail">
-              <div className="card__right-detail-group">
-                <p className="card__right-detail-label">Tanggal Lahir</p>
-                <p className="card__right-detail-data" id="previewBirthdate">
-                  {props.userData.birthdate}
-                </p>
-              </div>
-              <div className="card__right-detail-group">
-                <p className="card__right-detail-label">Pendidikan</p>
-                <p className="card__right-detail-data" id="previewEducation">
-                  {props.userData.education}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="card__right-detail-box">
-            <div className="card__right-detail">
-              <div className="card__right-detail-group">
-                <p className="card__right-detail-label">Jenis Kelamin</p>
-                <p className="card__right-detail-data" id="previewGender">
-                  {props.userData.gender}
-                </p>
-              </div>
-              <div className="card__right-detail-group">
-                <p className="card__right-detail-label">Agama</p>
-                <p className="card__right-detail-data" id="previewReligion">
-                  {props.userData.religion}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="card__right-detail-box">
-            <div className="card__right-detail">
-              <div className="card__right-detail-group">
-                <p className="card__right-detail-label">Email</p>
-                <p className="card__right-detail-data" id="previewEmail">
-                  {props.userData.email}
-                </p>
-              </div>
-              <div className="card__right-detail-group">
-                <p className="card__right-detail-label">No HP</p>
-                <p className="card__right-detail-data" id="previewPhone">
-                  {props.userData.phone}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="card__right-detail-box">
-            <div className="card__right-detail">
-              <div className="card__right-detail-group">
-                <p className="card__right-detail-label">Keahlian</p>
-                <p className="card__right-detail-data" id="previewSkills">
-                  {props.userData.skills}
-                </p>
-              </div>
-              <div className="card__right-detail-group">
-                <p className="card__right-detail-label">Alamat</p>
-                <p className="card__right-detail-data" id="previewAddress">
-                  {props.userData.address}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="card__right-social">
-            <div className="card__right-social-box">
-              <a href={"https://github.com/" + props.userData.git} id="previewGithub">
-                <i className="fab fa-github"></i>
-              </a>
-            </div>
-            <div className="card__right-social-box">
-              <a href={"https://instagram.com/" + props.userData.insta} id="previewInstagram">
-                <i className="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
+        <ModalAvatar avatar={props.userData.avatar} />
+        <div className="card-info">
+          <ModalDataId name={props.userData.name} />
+          <ModalData
+            data1={props.userData.birthdate}
+            data2={props.userData.education}
+            label1={label.label1}
+            label2={label.label2}
+          />
+          <ModalData
+            data1={props.userData.gender}
+            data2={props.userData.religion}
+            label1={label.label3}
+            label2={label.label4}
+          />
+          <ModalData
+            data1={props.userData.email}
+            data2={props.userData.phone}
+            label1={label.label5}
+            label2={label.label6}
+          />
+          <ModalData
+            data1={props.userData.skills}
+            data2={props.userData.address}
+            label1={label.label7}
+            label2={label.label8}
+          />
+          <ModalSocialMedia git={props.userData.git} insta={props.userData.insta} />
         </div>
       </div>
     </div>
