@@ -7,12 +7,12 @@
   box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.2);
 }
 
-.form-field__box {
+.form-box {
   display: flex;
   flex-direction: column;
 }
 
-.form-group-box {
+.form-groups {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -23,21 +23,17 @@
   width: 50%;
 }
 
-.merge {
-  width: 100%;
-}
-
 .form-group:last-child {
   margin-right: 0;
 }
 
-.form-data-label {
+.form-data__label {
   display: inline-block;
   font-size: 1.65rem;
   margin-bottom: 0.1rem;
 }
 
-.form-data-input {
+.form-data__input {
   width: 100%;
   height: 3rem;
   font-size: 1.6rem;
@@ -45,25 +41,25 @@
   border-bottom: 0.2rem solid #28b485;
 }
 
-.form-data-input:focus {
+.form-data__input:focus {
   outline: none;
 }
 
-.form-group-radio {
+.form-group__radio {
   margin-bottom: 0.5rem;
 }
 
-.form-data-radio {
+.form-data__radio {
   display: none;
 }
 
-.form-data-label__radio {
+.form-data__radio-label {
   font-size: 1.5rem;
   position: relative;
   padding-left: 2.5rem;
 }
 
-.form-radio-button {
+.form-data__radio-button {
   display: inline-block;
   width: 2rem;
   height: 2rem;
@@ -74,7 +70,7 @@
   left: 0;
 }
 
-.form-radio-button::after {
+.form-data__radio-button::after {
   content: "";
   display: inline-block;
   width: 0.6rem;
@@ -90,16 +86,16 @@
   opacity: 0;
 }
 
-.form-data-radio:checked ~ .form-data-label__radio .form-radio-button::after {
+.form-data__radio:checked ~ .form-data__radio-label .form-data__radio-button::after {
   opacity: 1;
 }
 
-.form-select__group {
+.form-group__select {
   height: 50%;
   width: 100%;
 }
 
-.form-select {
+.form-data__select {
   height: 100%;
   width: 100%;
 }
@@ -108,14 +104,14 @@
   border: none;
 }
 
-.form-field-button {
+.form-button {
   display: flex;
   justify-content: center;
   align-items: center;
 
   margin-top: 2rem;
 }
-.button {
+.form-button__submit {
   color: white;
   font-family: "Lato";
   font-size: 1.8rem;
@@ -131,12 +127,12 @@
   transition: all 0.5s;
 }
 
-.button:hover {
+.form-button__submit:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
 }
 
-.button:active {
+.form-button__submit:active {
   transform: translateY(0.1rem);
   box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
 }

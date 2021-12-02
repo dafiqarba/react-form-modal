@@ -92,90 +92,90 @@ function FormProfile(props) {
 
   return (
     <div className="form-wrapper">
-      <form className="form-field" action="#" onSubmit={submitHandler}>
+      <form className="form" action="#" onSubmit={submitHandler}>
         <FormHeader />
-        <div className="form-field__box">
-          <div className="form-group-box">
+        <div className="form-box">
+          <div className="form-groups">
             <div className="form-group">
-              <label className="form-data-label">Nama Lengkap</label>
-              <input type="text" className="form-data-input" onChange={nameChangeHandler} />
+              <label className="form-data__label">Nama Lengkap</label>
+              <input type="text" className="form-data__input" onChange={nameChangeHandler} />
             </div>
 
             <div className="form-group">
-              <label className="form-data-label">Tanggal lahir</label>
+              <label className="form-data__label">Tanggal lahir</label>
               <input
                 type="date"
-                className="form-data-input"
+                className="form-data__input"
                 onChange={birthdateChangeHandler}
               />
             </div>
           </div>
-          <div className="form-group-box">
+          <div className="form-groups">
             <div className="form-group">
-              <label className="form-data-label">Pendidikan</label>
+              <label className="form-data__label">Pendidikan</label>
               <input
                 type="text"
-                className="form-data-input"
+                className="form-data__input"
                 onChange={educationChangeHandler}
               />
             </div>
             <div className="form-group">
-              <label className="form-data-label">Keahlian</label>
+              <label className="form-data__label">Keahlian</label>
               <input
                 type="text"
-                className="form-data-input"
+                className="form-data__input"
                 onChange={skillsChangeHandler}
               />
             </div>
           </div>
-          <div className="form-group-box">
+          <div className="form-groups">
             <div className="form-group">
-              <label className="form-data-label">Email</label>
-              <input type="text" className="form-data-input" onChange={emailChangeHandler} />
+              <label className="form-data__label">Email</label>
+              <input type="text" className="form-data__input" onChange={emailChangeHandler} />
             </div>
             <div className="form-group">
-              <label className="form-data-label">No HP</label>
-              <input type="text" className="form-data-input" onChange={phoneChangeHandler} />
+              <label className="form-data__label">No HP</label>
+              <input type="text" className="form-data__input" onChange={phoneChangeHandler} />
             </div>
           </div>
-          <div className="form-group-box">
+          <div className="form-groups">
             <div className="form-group">
-              <label className="form-data-label">Jenis Kelamin</label>
-              <div className="form-group-radio">
+              <label className="form-data__label">Jenis Kelamin</label>
+              <div className="form-group__radio">
                 <input
                   type="radio"
-                  className="form-data-radio"
+                  className="form-data__radio"
                   id="laki-laki"
                   name="gender"
-                  value="laki-laki"
+                  value="Laki-laki"
                   onChange={genderChangeHandler}
                 />
-                <label htmlFor="laki-laki" className="form-data-label__radio">
-                  <span className="form-radio-button"></span>
+                <label htmlFor="laki-laki" className="form-data__radio-label">
+                  <span className="form-data__radio-button"></span>
                   Laki-laki
                 </label>
               </div>
-              <div className="form-group-radio">
+              <div className="form-group__radio">
                 <input
                   type="radio"
-                  className="form-data-radio"
+                  className="form-data__radio"
                   id="perempuan"
                   name="gender"
-                  value="perempuan"
+                  value="Perempuan"
                   onChange={genderChangeHandler}
                 />
-                <label htmlFor="perempuan" className="form-data-label__radio">
-                  <span className="form-radio-button"></span>
+                <label htmlFor="perempuan" className="form-data__radio-label">
+                  <span className="form-data__radio-button"></span>
                   Perempuan
                 </label>
               </div>
             </div>
             <div className="form-group">
-              <label className="form-data-label">Agama</label>
-              <div className="form-select__group">
+              <label className="form-data__label">Agama</label>
+              <div className="form-group__select">
                 <select
                   name="agama"
-                  className="form-select"
+                  className="form-data__select"
                   onChange={religionChangeHandler}
                 >
                   <option value=""></option>
@@ -188,41 +188,41 @@ function FormProfile(props) {
               </div>
             </div>
           </div>
-          <div className="form-group-box">
+          <div className="form-groups">
             <div className="form-group">
-              <label className="form-data-label">Github</label>
-              <input type="text" className="form-data-input" onChange={gitChangeHandler} />
+              <label className="form-data__label">Github</label>
+              <input type="text" className="form-data__input" onChange={gitChangeHandler} />
             </div>
             <div className="form-group">
-              <label className="form-data-label">Instagram</label>
+              <label className="form-data__label">Instagram</label>
               <input
                 type="text"
-                className="form-data-input"
+                className="form-data__input"
                 onChange={instaChangeHandler}
               />
             </div>
           </div>
-          <div className="form-group-box">
+          <div className="form-groups">
             <div className="form-group">
-              <label className="form-data-label">Alamat</label>
+              <label className="form-data__label">Alamat</label>
               <input
                 type="text"
-                className="form-data-input"
+                className="form-data__input"
                 onChange={addressChangeHandler}
               />
             </div>
             <div className="form-group">
-              <label className="form-data-label">Upload Picture</label>
+              <label className="form-data__label">Upload Picture</label>
               <input
                 type="file"
-                className="form-data-input picture-form"
+                className="form-data__input picture-form"
                 onChange={avatarChangeHandler}
               />
             </div>
           </div>
         </div>
-        <div className="form-field-button">
-          <button className="button" id="button">
+        <div className="form-button">
+          <button className="form-button__submit" id="button">
             Preview Data
           </button>
         </div>
