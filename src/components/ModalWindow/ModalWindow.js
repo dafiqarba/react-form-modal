@@ -2,6 +2,7 @@ import "./ModalWindow.css";
 
 function ModalWindow(props) {
   if (props.modalState === true) {
+    console.log(props.userData);
     //Visible
     document.querySelector(".modal-wrapper").classList.add("visible");
     //Invisible
