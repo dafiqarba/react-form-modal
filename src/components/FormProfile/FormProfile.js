@@ -98,7 +98,7 @@ function FormProfile(props) {
           <div className="form-group-box">
             <div className="form-group">
               <label className="form-data-label">Nama Lengkap</label>
-              <input type="text" className="form-data-input" id="name" onChange={nameChangeHandler} />
+              <input type="text" className="form-data-input" onChange={nameChangeHandler} />
             </div>
 
             <div className="form-group">
@@ -106,7 +106,6 @@ function FormProfile(props) {
               <input
                 type="date"
                 className="form-data-input"
-                id="birthdate"
                 onChange={birthdateChangeHandler}
               />
             </div>
@@ -117,7 +116,6 @@ function FormProfile(props) {
               <input
                 type="text"
                 className="form-data-input"
-                id="education"
                 onChange={educationChangeHandler}
               />
             </div>
@@ -126,7 +124,6 @@ function FormProfile(props) {
               <input
                 type="text"
                 className="form-data-input"
-                id="skills"
                 onChange={skillsChangeHandler}
               />
             </div>
@@ -134,11 +131,11 @@ function FormProfile(props) {
           <div className="form-group-box">
             <div className="form-group">
               <label className="form-data-label">Email</label>
-              <input type="text" className="form-data-input" id="email" onChange={emailChangeHandler} />
+              <input type="text" className="form-data-input" onChange={emailChangeHandler} />
             </div>
             <div className="form-group">
               <label className="form-data-label">No HP</label>
-              <input type="text" className="form-data-input" id="phone" onChange={phoneChangeHandler} />
+              <input type="text" className="form-data-input" onChange={phoneChangeHandler} />
             </div>
           </div>
           <div className="form-group-box">
@@ -178,7 +175,6 @@ function FormProfile(props) {
               <div className="form-select__group">
                 <select
                   name="agama"
-                  id="religion"
                   className="form-select"
                   onChange={religionChangeHandler}
                 >
@@ -195,14 +191,13 @@ function FormProfile(props) {
           <div className="form-group-box">
             <div className="form-group">
               <label className="form-data-label">Github</label>
-              <input type="text" className="form-data-input" id="github" onChange={gitChangeHandler} />
+              <input type="text" className="form-data-input" onChange={gitChangeHandler} />
             </div>
             <div className="form-group">
               <label className="form-data-label">Instagram</label>
               <input
                 type="text"
                 className="form-data-input"
-                id="instagram"
                 onChange={instaChangeHandler}
               />
             </div>
@@ -213,7 +208,6 @@ function FormProfile(props) {
               <input
                 type="text"
                 className="form-data-input"
-                id="address"
                 onChange={addressChangeHandler}
               />
             </div>
@@ -222,7 +216,6 @@ function FormProfile(props) {
               <input
                 type="file"
                 className="form-data-input picture-form"
-                id="avatar"
                 onChange={avatarChangeHandler}
               />
             </div>
