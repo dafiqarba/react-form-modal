@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+# react-form-modal
+
+Input user data and display it on the modal window
+
+## Usage
+
+1. Clone the repo to your local dir.
+2. Run `npm install` to install all depedencies.
+3. Run `npm start` to run the react app in local dev server.
+
+# Prodemy #7
+
+## Tugas React-JS
+
+1. [react-profile_card](https://github.com/dafiqarba/react-profile_card) (24 November 2021)
+2. [react-form-modal](https://github.com/dafiqarba/react-form-modal) (2 Desember 2021)
+
+<details>  
+<summary> #Getting Started with Create React App</summary>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +86,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+</details>
