@@ -8,7 +8,7 @@ Input user data and display it on the modal window
 2. Run `npm install` to install all depedencies.
 3. Run `npm start` to run the react app in local dev server. 
 
-## Tugas Prodemy #7 - React-JS
+## Tugas Prodemy #7 - ReactJS
 
 1. [react-profile_card](https://github.com/dafiqarba/react-profile_card) (24 November 2021)
 2. [react-form-modal](https://github.com/dafiqarba/react-form-modal) (2 Desember 2021)
