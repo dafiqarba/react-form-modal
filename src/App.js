@@ -9,15 +9,17 @@ function App() {
   const [modalState, setModalState] = useState(false);
 
   // Gather data from Form component and set modalState to true
-  const onSubmitDataHandler = (userDataForm) => {
+  const submitDataHandler = (userDataForm) => {
     setUserData(userDataForm);
     setModalState(true);
-  }
-  
+  };
+  const closeHandler = () => {
+    setModalState(false);
+  };
   return (
     <div className="App">
-      <FormProfile onSubmitData={onSubmitDataHandler}/>
-      <ModalWindow userData = {userData} modalState={modalState}/>
+      <FormProfile onSubmitData={submitDataHandler} />
+      <ModalWindow userData={userData} modalState={modalState} onClose={closeHandler} />
     </div>
   );
 }
