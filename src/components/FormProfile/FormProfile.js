@@ -4,67 +4,22 @@ import "./FormProfile.css";
 import FormHeader from "./../FormHeader/FormHeader";
 
 function FormProfile(props) {
-  const [enteredName, setEnteredName] = useState("");
-  const [enteredBirthdate, setEnteredBirthdate] = useState("");
-  const [enteredEducation, setEnteredEducation] = useState("");
-  const [enteredSkills, setEnteredSkills] = useState("");
-  const [enteredEmail, setEnteredEmail] = useState("");
-  const [enteredPhone, setEnteredPhone] = useState("");
-  const [enteredGender, setEnteredGender] = useState("");
-  const [enteredReligion, setEnteredReligion] = useState("");
-  const [enteredGit, setEnteredGit] = useState("");
-  const [enteredInsta, setEnteredInsta] = useState("");
-  const [enteredAddress, setEnteredAddress] = useState("");
-  const [enteredAvatar, setEnteredAvatar] = useState("");
+  const [userData, setUserData] = useState({});
 
-  const nameChangeHandler = (event) => {
-    setEnteredName(event.target.value);
+  const changeHandler = (event) => {
+    setUserData({
+      ...userData,
+      [event.target.name]: event.target.value,
+    });
   };
 
-  const birthdateChangeHandler = (event) => {
-    setEnteredBirthdate(event.target.value);
-  };
-
-  const educationChangeHandler = (event) => {
-    setEnteredEducation(event.target.value);
-  };
-
-  const skillsChangeHandler = (event) => {
-    setEnteredSkills(event.target.value);
-  };
-
-  const emailChangeHandler = (event) => {
-    setEnteredEmail(event.target.value);
-  };
-
-  const phoneChangeHandler = (event) => {
-    setEnteredPhone(event.target.value);
-  };
-
-  const genderChangeHandler = (event) => {
-    setEnteredGender(event.target.value);
-  };
-
-  const religionChangeHandler = (event) => {
-    setEnteredReligion(event.target.value);
-  };
-
-  const gitChangeHandler = (event) => {
-    setEnteredGit(event.target.value);
-  };
-
-  const instaChangeHandler = (event) => {
-    setEnteredInsta(event.target.value);
-  };
-
-  const addressChangeHandler = (event) => {
-    setEnteredAddress(event.target.value);
-  };
-  
   const avatarChangeHandler = (event) => {
     if (event.target.files.length > 0) {
       let src = URL.createObjectURL(event.target.files[0]);
-      setEnteredAvatar(src);
+      setUserData({
+        ...userData,
+        [event.target.name]: src,
+      });
     }
   };
 
@@ -72,22 +27,7 @@ function FormProfile(props) {
     // Prevent from form submission to server
     event.preventDefault();
     // Gather all data from input
-    const userData = {
-      name: enteredName,
-      birthdate: enteredBirthdate,
-      education: enteredEducation,
-      skills: enteredSkills,
-      email: enteredEmail,
-      phone: enteredPhone,
-      gender: enteredGender,
-      religion: enteredReligion,
-      git: enteredGit,
-      insta: enteredInsta,
-      address: enteredAddress,
-      avatar: enteredAvatar,
-    };
-
-    props.onSubmitData(userData);
+    props.onSubmitData(userData); 
   };
 
   return (
@@ -98,7 +38,7 @@ function FormProfile(props) {
           <div className="form-groups">
             <div className="form-group">
               <label className="form-data__label">Nama Lengkap</label>
-              <input type="text" className="form-data__input" onChange={nameChangeHandler} />
+              <input type="text" className="form-data__input" onChange={changeHandler} name="name" />
             </div>
 
             <div className="form-group">
@@ -106,7 +46,8 @@ function FormProfile(props) {
               <input
                 type="date"
                 className="form-data__input"
-                onChange={birthdateChangeHandler}
+                onChange={changeHandler}
+                name="birthdate"
               />
             </div>
           </div>
@@ -116,26 +57,23 @@ function FormProfile(props) {
               <input
                 type="text"
                 className="form-data__input"
-                onChange={educationChangeHandler}
+                onChange={changeHandler}
+                name="education"
               />
             </div>
             <div className="form-group">
               <label className="form-data__label">Keahlian</label>
-              <input
-                type="text"
-                className="form-data__input"
-                onChange={skillsChangeHandler}
-              />
+              <input type="text" className="form-data__input" onChange={changeHandler} name="skills" />
             </div>
           </div>
           <div className="form-groups">
             <div className="form-group">
               <label className="form-data__label">Email</label>
-              <input type="text" className="form-data__input" onChange={emailChangeHandler} />
+              <input type="text" className="form-data__input" onChange={changeHandler} name="email" />
             </div>
             <div className="form-group">
               <label className="form-data__label">No HP</label>
-              <input type="text" className="form-data__input" onChange={phoneChangeHandler} />
+              <input type="text" className="form-data__input" onChange={changeHandler} name="phone" />
             </div>
           </div>
           <div className="form-groups">
@@ -148,7 +86,7 @@ function FormProfile(props) {
                   id="laki-laki"
                   name="gender"
                   value="Laki-laki"
-                  onChange={genderChangeHandler}
+                  onChange={changeHandler}
                 />
                 <label htmlFor="laki-laki" className="form-data__radio-label">
                   <span className="form-data__radio-button"></span>
@@ -162,7 +100,7 @@ function FormProfile(props) {
                   id="perempuan"
                   name="gender"
                   value="Perempuan"
-                  onChange={genderChangeHandler}
+                  onChange={changeHandler}
                 />
                 <label htmlFor="perempuan" className="form-data__radio-label">
                   <span className="form-data__radio-button"></span>
@@ -173,11 +111,7 @@ function FormProfile(props) {
             <div className="form-group">
               <label className="form-data__label">Agama</label>
               <div className="form-group__select">
-                <select
-                  name="agama"
-                  className="form-data__select"
-                  onChange={religionChangeHandler}
-                >
+                <select className="form-data__select" onChange={changeHandler} name="religion">
                   <option value=""></option>
                   <option value="Islam">Islam</option>
                   <option value="Kristen">Kristen</option>
@@ -191,25 +125,17 @@ function FormProfile(props) {
           <div className="form-groups">
             <div className="form-group">
               <label className="form-data__label">Github</label>
-              <input type="text" className="form-data__input" onChange={gitChangeHandler} />
+              <input type="text" className="form-data__input" onChange={changeHandler} name="git" />
             </div>
             <div className="form-group">
               <label className="form-data__label">Instagram</label>
-              <input
-                type="text"
-                className="form-data__input"
-                onChange={instaChangeHandler}
-              />
+              <input type="text" className="form-data__input" onChange={changeHandler} name="insta" />
             </div>
           </div>
           <div className="form-groups">
             <div className="form-group">
               <label className="form-data__label">Alamat</label>
-              <input
-                type="text"
-                className="form-data__input"
-                onChange={addressChangeHandler}
-              />
+              <input type="text" className="form-data__input" onChange={changeHandler} name="address" />
             </div>
             <div className="form-group">
               <label className="form-data__label">Upload Picture</label>
@@ -217,6 +143,7 @@ function FormProfile(props) {
                 type="file"
                 className="form-data__input picture-form"
                 onChange={avatarChangeHandler}
+                name="avatar"
               />
             </div>
           </div>
