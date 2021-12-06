@@ -6,15 +6,6 @@ import ModalData from "./ModalData";
 import ModalSocialMedia from "./ModalSocialMedia";
 
 function ModalWindow(props) {
-  if (props.modalState === true) {
-    console.log(props.userData);
-    //Visible
-    document.querySelector(".modal-wrapper").classList.add("visible");
-    //Invisible
-    document.querySelector(".modal-wrapper").addEventListener("click", () => {
-      document.querySelector(".modal-wrapper").classList.remove("visible");
-    });
-  }
 
   let label = {
     label1: "Tanggal Lahir",
@@ -28,7 +19,7 @@ function ModalWindow(props) {
   };
 
   return (
-    <div className="modal-wrapper" id="modal-wrapper">
+    <div className={(props.modalState) ? "modal-wrapper visible" : "modal-wrapper invisible"} onClick={props.onClose}>
       <div className="card">
         <ModalAvatar avatar={props.userData.avatar} />
         <div className="card-info">
