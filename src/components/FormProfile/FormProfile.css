@@ -29,7 +29,7 @@
 
 .form-data__label {
   display: inline-block;
-  font-size: 1.65rem;
+  font-size: 1.6rem;
   margin-bottom: 0.1rem;
 }
 
@@ -38,6 +38,7 @@
   height: 3rem;
   font-size: 1.6rem;
   border: none;
+  background-color: transparent;
   border-bottom: 0.2rem solid #28b485;
 }
 
