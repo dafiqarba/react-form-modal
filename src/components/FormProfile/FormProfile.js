@@ -27,7 +27,7 @@ function FormProfile(props) {
     // Prevent from form submission to server
     event.preventDefault();
     // Gather all data from input
-    props.onSubmitData(userData); 
+    props.onSubmitData(userData);
   };
 
   return (
